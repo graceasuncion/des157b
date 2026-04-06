@@ -13,13 +13,18 @@ body{
     overflow: hidden;
     margin: 0;
 
-    background-image: url(images/des157b_portal_day.png);
-    background-position: center 110%;
+    background-image: url(images/portal_background_day.gif);
+    background-position: center 100%;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
 }
 
-header{
-    
+header {
+    font-family: "Grandstander", cursive;
+    text-align: center;
+}
+
+main {
+    font-family: "Grandstander", cursive ;
 }
