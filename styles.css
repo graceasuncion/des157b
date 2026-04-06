@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+/*page styling*/
+body{
+    overflow: hidden;
+    margin: 0;
+
+    background-image: url(images/des157b_portal_day.png);
+    background-position: center 110%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+header{
+    
+}
