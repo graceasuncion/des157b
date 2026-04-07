@@ -147,8 +147,24 @@ header {
     color: rgb(50, 77, 102);
 }
 
-/*night mode*/
+/*night mode styling*/
 body.night header h1,
 body.night header h2 {
     color: #e8e8f0;
+}
+
+#moon{
+    position: fixed;
+    top: 3vh;
+    left: 3vw;
+    width: 12vw;
+    max-width: 160px;
+    opacity: 0;
+    z-index: 0;
+
+    transition: opacity 1s ease-in-out;
+}
+
+body.night #moon {
+    opacity: 1;
 }
