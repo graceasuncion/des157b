@@ -72,6 +72,38 @@ section li{
     padding: 0.3rem 0;
 }
 
+/*button*/
+.toggle-track {
+    width: 80px;
+    height: 40px;
+    border-radius: 999px;
+    background: #87CEEB;      
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.4s;
+}
+
+.toggle-track.night {
+    background: #1a1a3e;      /* dark navy = night */
+}
+
+.toggle-thumb {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #f9d71c;      /* yellow sun */
+    transition: transform 0.4s, background 0.4s;
+}
+
+.toggle-track.night .toggle-thumb {
+    transform: translateX(40px);
+    background: #e8e8f0;      /* grey-white moon */
+}
+
 /*day time styling*/
 
 header {
