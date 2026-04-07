@@ -9,6 +9,7 @@ img {
 }
 
 /*page styling*/
+
 body{
     overflow: hidden;
     margin: 0;
@@ -20,11 +21,61 @@ body{
     height: 100vh;
 }
 
-header {
+
+section h3 {
     font-family: "Grandstander", cursive;
     text-align: center;
+    color: rgb(35, 55, 73);
 }
 
 main {
     font-family: "Grandstander", cursive ;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 0.25em;
+    padding: 0.5em;
+
+    width: fit-content; 
+}
+
+main section{
+    text-align: center;
+
+    flex: 1;
+    background-color: aliceblue;
+    margin: 0 0.5em;     
+    padding: 1em;      
+    border-radius: 8px;
+
+    min-width: 200px;
+    max-width: 200px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(56, 89, 128);
+}
+
+a:hover{
+    color: rgb(37, 59, 87);
+    text-decoration: underline;
+}
+
+nav ol, nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+section li{
+    padding: 0.3rem 0;
+}
+
+/*day time styling*/
+
+header {
+    font-family: "Grandstander", cursive;
+    text-align: center;
+    color: rgb(50, 77, 102);
 }
