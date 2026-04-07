@@ -95,13 +95,13 @@ section li{
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background: #f9d71c;      /* yellow sun */
+    background: #e9c25a;      /* yellow sun */
     transition: transform 0.4s, background 0.4s;
 }
 
 .toggle-track.night .toggle-thumb {
     transform: translateX(40px);
-    background: #e8e8f0;      /* grey-white moon */
+    background: #8aa4cf;      /* grey-white moon */
 }
 
 /*day time styling*/
