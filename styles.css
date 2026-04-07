@@ -12,13 +12,18 @@ img {
 
 body{
     overflow: hidden;
-    margin: 0;
+    margin: 0;    
 
     background-image: url(images/portal_background_day.gif);
-    background-position: center 100%;
+    background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
+    
     height: 100vh;
+    width: 100vw;
+
+    transition: background 0.5s ease-in-out;
+    z-index: -3;
 }
 
 
@@ -37,6 +42,9 @@ main {
     padding: 0.5em;
 
     width: fit-content; 
+
+    position: relative;
+    z-index: 1;
 }
 
 main section{
@@ -72,6 +80,19 @@ section li{
     padding: 0.3rem 0;
 }
 
+/*island photo*/
+#island {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); 
+    z-index: 0;
+    object-fit: contain;
+
+   height: 60vh;
+   width: auto;
+}
+
 /*button*/
 .toggle-track {
     width: 80px;
@@ -80,12 +101,16 @@ section li{
     background: #87CEEB;      
     border: none;
     cursor: pointer;
-    position: relative;
-    transition: background 0.4s;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+   
+    transition: background 0.3s ease;
 }
 
 .toggle-track.night {
-    background: #1a1a3e;      /* dark navy = night */
+    background: #1a1a3e;      
 }
 
 .toggle-thumb {
@@ -95,7 +120,7 @@ section li{
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background: #e9c25a;      /* yellow sun */
+    background: #f9d71c;      /* yellow sun */
     transition: transform 0.4s, background 0.4s;
 }
 
@@ -104,10 +129,104 @@ section li{
     background: #8aa4cf;      /* grey-white moon */
 }
 
+/*transition for the different modes*/
+header h1, header h2 {
+    transition: color 0.5s ease;
+}
+
+
 /*day time styling*/
 
 header {
     font-family: "Grandstander", cursive;
     text-align: center;
     color: rgb(50, 77, 102);
+}
+
+/*night mode styling*/
+body.night header h1,
+body.night header h2 {
+    color: #e8e8f0;
+}
+
+#moon{
+    position: fixed;
+    top: 3vh;
+    left: 3vw;
+    width: 12vw;
+    max-width: 200px;
+    opacity: 0;
+    z-index: 0;
+
+    transition: opacity 1s ease-in-out;
+}
+
+body.night #moon {
+    opacity: 1;
+}
+
+/*night sky*/
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background-image: url("images/portal_background_night.gif");
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    pointer-events: none;
+    z-index: -2;
+}
+
+body.night::before {
+    opacity: 1;
+}
+
+/*stars in the sky*/
+body.night::after {
+    content: "";
+    position: fixed;
+
+  
+    top: 0;
+    height: 62vh;  
+    left: 0;
+    right: 0;
+
+    background-image:
+        radial-gradient(3px 3px at 20% 30%, white, transparent),
+        radial-gradient(3px 3px at 80% 20%, white, transparent),
+        radial-gradient(2px 2px at 60% 50%, rgba(255,255,255,0.9), transparent),
+        radial-gradient(2px 2px at 10% 70%, rgba(255,255,255,0.9), transparent),
+        radial-gradient(1.5px 1.5px at 40% 60%, rgba(255,255,255,0.7), transparent);
+
+    background-size:
+        200px 200px,
+        200px 200px,
+        200px 200px,
+        200px 200px,
+        200px 200px;
+
+    background-repeat: repeat;
+
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    pointer-events: none;
+    z-index: -1;
+
+    animation: twinkle 3s ease-in-out infinite;
+}
+
+body.night::after {
+    opacity: 1;
+}
+
+/* twinkle animation */
+@keyframes twinkle {
+    0%, 100% { opacity: 0.9; }
+    50% { opacity: 0.3; }
 }
