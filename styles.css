@@ -21,6 +21,11 @@ body{
     height: 100vh;
 }
 
+/*night background*/
+body.night{
+    background-image: url(images/portal_background_night.gif);
+}
+
 
 section h3 {
     font-family: "Grandstander", cursive;
@@ -101,6 +106,7 @@ section li{
     right: 20px;
     z-index: 2;
    
+    transition: background 0.3s ease;
 }
 
 .toggle-track.night {
@@ -115,6 +121,8 @@ section li{
     height: 30px;
     border-radius: 50%;
     background: #f9d71c;      /* yellow sun */
+
+    transition: transform 0.3s ease, background 0.3s ease;
   
 }
 
@@ -123,10 +131,22 @@ section li{
     background: #e8e8f0;      /* grey-white moon */
 }
 
+/*transition for the different modes*/
+header h1, header h2 {
+    transition: color 0.4s ease, text-shadow 0.4s ease;
+}
+
+
 /*day time styling*/
 
 header {
     font-family: "Grandstander", cursive;
     text-align: center;
     color: rgb(50, 77, 102);
+}
+
+/*night mode*/
+body.night header h1,
+body.night header h2 {
+    color: #e8e8f0;
 }
