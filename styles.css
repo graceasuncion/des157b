@@ -81,7 +81,7 @@ section li{
     border: none;
     cursor: pointer;
     position: relative;
-    transition: background 0.4s;
+   
 }
 
 .toggle-track.night {
@@ -96,7 +96,7 @@ section li{
     height: 30px;
     border-radius: 50%;
     background: #f9d71c;      /* yellow sun */
-    transition: transform 0.4s, background 0.4s;
+  
 }
 
 .toggle-track.night .toggle-thumb {
