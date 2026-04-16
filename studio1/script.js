@@ -7,11 +7,11 @@
 
         const loader = document.querySelector("#loader");
 
-        loader.computedStyleMap.opacity = "0";
+        loader.style.opacity = "0";
 
         setTimeout(function(){
-            loader.computedStyleMap.display = "none";
-        }(), 400)
+            loader.style.display = "none";
+        }, 400)
 
     }());
 
