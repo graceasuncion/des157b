@@ -3,6 +3,18 @@
 
     console.log("running js");
 
+    window.addEventListener("load", function(){
+
+        const loader = document.querySelector("#loader");
+
+        loader.computedStyleMap.opacity = "0";
+
+        setTimeout(function(){
+            loader.computedStyleMap.display = "none";
+        }(), 400)
+
+    }());
+
     const hoverText = document.querySelector("#hover");
 
     const phrases = [
@@ -19,6 +31,7 @@
     hoverText.addEventListener("mouseenter", function() {
         index = (index + 1) % phrases.length;
         hoverText.textContent = phrases[index];
-});
+    });
+
 
 }());
