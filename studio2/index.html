@@ -4,8 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>check yourself project</title>
+
+    <!-- Normalize CSS for browser compatability -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!-- Add link to any google fonts used here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!-- My Styles -->
+    <link href="styles.css" rel="stylesheet">
+
+    <!-- My Script -->
+    <script src="script.js" defer></script>
+
 </head>
 <body>
     <h1>Look at What Times I've Came Home</h1>
+
+     <div class="clock-container">
+        <div class="time=row">
+            <div class="seg-group" id="hours"></div>
+            <div class="colon" id="colon">:</div>
+            <div class="seg-group" id="minutes"></div>
+            <div id="ampm"></div>
+        </div>
+     </div>
+
+     <div id="selected-label"></div>
+
+     <div class="btn">
+        <div class="selected-label">Date</div>
+        <div class="btn-row" id="day-btns"></div>
+     </div>
 </body>
 </html>
