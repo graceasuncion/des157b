@@ -5,6 +5,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 2rem;
 
 }
 
@@ -13,6 +14,9 @@ h1 {
     text-align: center;
     padding: 20px;
     font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #2f3e46;
 }
 
 .clock-container {
@@ -26,7 +30,7 @@ h1 {
 .time-row {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 .seg-group{
@@ -41,8 +45,86 @@ h1 {
     flex-direction: column;
     justify-content: space-between;
     padding: 4px;
+
+    font-size: 64px;
+    font-weight: 700;
+    color: #2f3e46;
+
     background: #e8e8e4;
     border: 0.5px solid rgba(0, 0, 0, 0.15);
     border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08) inset 0 0 8px rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(4px);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.digit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12),inset 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.colon {
+    font-size: 64px;
+    font-weight: 600;
+    color: #2f3e46;
+    margin-top: -10px;
+}
+#ampm {
+    font-size: 32px;
+    font-weight: 600;
+    color: #52796f;
+    margin-left: 6px;
+}
+
+#selected-label {
+    margin-top: 1rem;
+    font-size: 20px;
+    font-weight: 500;
+    color: #354f52;
+}
+
+.btn {
+    margin-top: 2rem;
+    background: white;
+    padding: 1.25rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    width: 90%;
+    max-width: 500px;
+}
+
+.selected-label {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #2f3e46;
+}
+
+
+.btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+.btn-row button {
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    background-color: #84a98c;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.btn-row button:hover {
+    background-color: #52796f;
+    transform: translateY(-2px);
+}
+
+.btn-row button.selected {
+    background-color: #354f52;
 }
 
