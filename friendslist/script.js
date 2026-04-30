@@ -3,6 +3,10 @@
     'use strict';
     console.log('reading.js');
 
+    Parse.initialize("lYMGLuciwQ4dC1iKiXENi0S66w4XAC12xz9wud3z","MEdSU8HPdZAysA9zApR3SXeDMMKYch5IgBGnMnZv"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
+    Parse.serverURL = 'https://parseapi.back4app.com/';
+
+
     const newBtn = document.querySelector("#newbtn");
     const editBtns = document.querySelector(".fa-edit");
     const addFriendForm = document.querySelector("#add-friend");
@@ -29,5 +33,14 @@
         event.preventDefault();
         editFriendForm.className = "edit-friend-offscreen";
     })
+
+    async function displayFriends() {
+    const friends = Parse.Object.extend('Friends');
+    const query = new Parse.Query(friends);
+    const results = await query.ascending('lname').find();
+    console.log(results);
+}
+
+displayFriends();
 
 })();
