@@ -19,14 +19,14 @@
     <!-- My Script -->
     <script src="script.js" defer></script>
 
-    <script src="granim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/granim@2.0.0/dist/granim.min.js"></script>
 
     <script src="p5.min.js"></script>
 
 </head>
 <body>
     <!--gradient-->
-    <canvas id="canvas-basic"></canvas>
+    <canvas id="granim-canvas"></canvas>
 
     <!--fish-->
     <div id="p5-container"></div>
@@ -37,8 +37,9 @@
             <h1>Don't Touch the Fish!</h1>
         </div>
 
-        <div id="fish-count"><span></span></div>
-        <div></div>
+        <div id="fish-count"><span id="count">20</span> fish in the tank</div>
+        <div id="libraries">Libraries used: <a href="https://p5js.org" target="_blank">P5.Js</a> &amp; <a href="https://sarcadass.github.io/granim.js/" target="_blank">Granim.js</a></div>
+        <div id="tip">Hover over the fish!</div>
     </div>
     
 </body>
