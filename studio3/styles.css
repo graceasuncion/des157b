@@ -57,6 +57,7 @@ body{
     letter-spacing: 2px;
  }
 
+
  /*fish count*/
  #fish-count {
     font-family: "Grandstander", cursive;
@@ -90,8 +91,8 @@ body{
     pointer-events: all;
  }
 
- /*library*/
- #libraries{
+ /*footer*/
+#footer {
     font-family: "Grandstander", cursive;
     position: absolute;
     bottom: 25px;
@@ -105,17 +106,18 @@ body{
     font-size: 1rem;
     backdrop-filter: blur(8px);
     white-space: nowrap;
- }
+    z-index: 10;
+}
 
- #libraries a {
-    color: rgb(116, 203, 207);
+#footer a {
+    color: #48cae4;
     text-decoration: none;
-    pointer-events: all;
- }
+    font-weight: 600;
+}
 
- #libraries a:hover{
+#footer a:hover {
     text-decoration: underline;
- }
+}
 
  /*bubbles*/
  .bubble {
