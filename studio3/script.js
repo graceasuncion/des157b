@@ -91,8 +91,59 @@ new p5(function(p){
             if(d < this.fleeRadius){
                 this.fleeting = true;
                 const angle = p.atan2(this.y - p.mouseY, this.x - p.mouseX);
-                
+                const targetSpeedX = p.cos(angle) * this.fleeSpeed;
+                this.speedX = p.lerp(this.speedX, targetSpeedX, 0.25);
+                this.speedY = p.lerp(this.speedY, targetSpeedY, 0.25);
+            } else {
+                this.fleeing = false;
+
+                //gradually return to calm swimming
+                const calmX = (this.speedX > 0 ? 1: -1)*this.baseSpeed;
+                this.speedX = p.lerp(this.speedX, calmX, 0.03);
+                this.speedY = p.lerp(this.speedY, p.sin(this.wobble * 0.02) * 0.8, 0.04);
             }
+            this.wobble++;
+            this.x += this.speedX;
+            this.y += this.speedY;
+
+            //wall bounce
+            const pad = this.size * 0.6;
+
+            if(this.x > p.width - pad){ this.x = p.width - pad; this.speedX *= -1; }
+            if(this.x < pad) { this.x = pad; this.speedX *= -1;}
+            if (this.y > p.height - pad){this.y = p.height -pad; this.speedY *= -1;}
+            if(this.y < 90 + pad){this.y = 90 + pad; this.speedY *=-1;}
+
+            //chance for bubbles to appear
+            if (p.random() < 0.005){
+                bubbles.push(new bubbles(this.x, this.y - this.size * 0.3));
+            }
+        }
+
+        draw(){
+            p.push();
+            p.translate(this.x, this.y);
+            if (this.speedX < 0) p.scale(-1, 1);
+
+            p.noStroke();
+
+            //tail
+            p.fill(this.finCol);
+            p.triangle(
+                -this.size * 0.45, 0,
+                -this.size * 0.85, -this.size * 0.35,
+                -this.size * 0.85, this.size * 0.35
+            );
+
+            //pectoral fin
+            p.fill(this.finCol);
+            p.ellipse(0, this.size * 0.18, this.size * 0.35, this.size * 0.18);
+
+            //body
+            p.fill(this.fleeing ? p.color(255, 80,80):this.bodyCol);
+            p.ellipse(0,0, this.size, this.size * 0.55);
+
+            //
         }
 
     }
