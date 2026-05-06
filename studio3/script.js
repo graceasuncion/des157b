@@ -143,9 +143,75 @@ new p5(function(p){
             p.fill(this.fleeing ? p.color(255, 80,80):this.bodyCol);
             p.ellipse(0,0, this.size, this.size * 0.55);
 
-            //
+            //eye white
+            p.fill(255);
+            p.circle(this.size * 0.22, -this.size * 0.06, this.size * 0.18);
+
+            //pupil
+            p.fill(20);
+            p.circle(this.size*0.25, -this.size * 0.6, this.size * 0.09);
+
+            //shine
+            p.fill(255, 255, 255, 160);
+            p.circle(this.size * 0.27, -this.size * 0.09, this.size * 0.04);
+
+            p.pop();
+        }
+    }
+    
+    class Bubble {
+        constructor(x,y){
+            this.x = x + p.random(-10,10);
+            this.y = y;
+            this.size = p.random(4, 10);
+            this.speed = p.random(0.8, 2);
+            this.alpha = 180; 
+            this.wobbleOffset = p.random(1000);
         }
 
+        update(){
+            this.y -= this.speed;
+            this.x += p.sin(this.wobbleOffset * 0.05) * 0.5;
+            this.wobbleOffset++;
+            this.alpha -= 1.5;
+        }
+
+        draw(){
+            p.noFill();
+            p.stroke(255, 255, 255, this.alpha);
+            p.strokeWeight(1);
+            p.circle(this.x,this.y, this.size);
+        }
+
+        isDead(){
+            return this.alpha <= 0 || this.y < 80;
+    }
+
+    setup = function(){
+            const canvas = p.createCanvas(1200,750);
+            canvas.parent('p5-container');
+            canvas.style('display','block');
+            canvas.style('background','transparent');
+            p.clear();
+
+            for(let i =0; i<10; i++) fish.push(new Fish());
+            countEl.textContent = fish.length;
+        };
+
+        draw = function(){
+            p.clear();
+
+            //update + draw bubbles
+            for (let i = bubbles.length - 1; i>=0; i--){
+                bubbles[i].update();
+                bubbles[i].draw();
+                if (bubbles[i].isDead()) bubbles.splice(i,1);
+            }
+            for (const f of fish){
+                f.move();
+                f.draw();
+            }
+        }
     }
 })
 
