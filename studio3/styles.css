@@ -1,3 +1,7 @@
+body{
+    overflow: hidden;
+}
+
 /*gradient styling*/
 #granim-canvas{
     position: absolute;
