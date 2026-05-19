@@ -1,0 +1,284 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Grandstander", cursive;
+    background-image: url(images/portal_background_day.gif);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0;
+    padding: 2rem 1rem 6rem;
+}
+
+.wrap {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+/* header */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: rgb(50, 77, 102);
+}
+
+header h1 {
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    margin-bottom: 0.25rem;
+}
+
+header p {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* section headings */
+h2 {
+    font-size: 1.1rem;
+    color: rgb(35, 55, 73);
+    text-align: center;
+    margin: 2rem 0 1rem;
+}
+
+/* back link */
+.back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    color: rgb(56, 89, 128);
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* shared card */
+.entry,
+.feature,
+.summary,
+.update-note {
+    background-color: aliceblue;
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* links */
+a {
+    color: rgb(56, 89, 128);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(37, 59, 87);
+    text-decoration: underline;
+}
+
+/* tags */
+.tag {
+    display: inline-block;
+    margin-top: 0.75rem;
+    padding: 0.15rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    background: transparent;
+    border: 1px solid rgb(56, 89, 128);
+    color: rgb(56, 89, 128);
+}
+
+/* ── Annotated bibliography ── */
+.citation {
+    font-size: 0.85rem;
+    color: rgb(56, 89, 128);
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    text-indent: -1.5rem;
+    line-height: 1.6;
+}
+
+.anno-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgb(35, 55, 73);
+    margin-bottom: 0.25rem;
+    margin-top: 0.85rem;
+}
+
+.annotation {
+    font-size: 0.9rem;
+    color: rgb(35, 55, 73);
+    line-height: 1.75;
+}
+
+/* ── Comparative analysis ── */
+.project-num {
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgb(56, 89, 128);
+    margin-bottom: 0.3rem;
+}
+
+.entry h2 {
+    font-size: 1.15rem;
+    color: rgb(35, 55, 73);
+    margin-bottom: 0.2rem;
+    text-align: left;
+}
+
+.project-link {
+    font-size: 0.82rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.screenshot {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #d6e8f5;
+    border: 1px dashed rgb(56, 89, 128);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.screenshot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.screenshot-placeholder {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.screenshot-placeholder .icon {
+    font-size: 1.75rem;
+    margin-bottom: 0.4rem;
+    display: block;
+}
+
+.screenshot-placeholder p {
+    font-size: 0.75rem;
+    color: rgb(56, 89, 128);
+    line-height: 1.5;
+}
+
+.eval-text {
+    font-size: 0.9rem;
+    color: rgb(35, 55, 73);
+    line-height: 1.75;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.update-note {
+    font-size: 0.85rem;
+    color: rgb(35, 55, 73);
+    line-height: 1.6;
+}
+
+/* ── Feasibility report ── */
+.legend {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    font-size: 0.78rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.feature-title {
+    font-size: 1rem;
+    color: rgb(35, 55, 73);
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+.feature-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.feature-col-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgb(56, 89, 128);
+    margin-bottom: 0.25rem;
+}
+
+.feature-col-val {
+    font-size: 0.85rem;
+    color: rgb(35, 55, 73);
+    line-height: 1.6;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.15rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.badge-confident { background: #d4edda; color: #1a5c2e; }
+.badge-learnable  { background: #fff3cd; color: #7a5200; }
+.badge-challenge  { background: #fde8e8; color: #7a1a1a; }
+
+.difficulty {
+    background-color: aliceblue;
+    border-left: 3px solid rgb(56, 89, 128);
+    border-radius: 0 8px 8px 0;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.difficulty-title {
+    font-size: 0.95rem;
+    color: rgb(35, 55, 73);
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+.difficulty p {
+    font-size: 0.85rem;
+    color: rgb(56, 89, 128);
+    line-height: 1.65;
+}
+
+.summary p {
+    font-size: 0.9rem;
+    color: rgb(35, 55, 73);
+    line-height: 1.75;
+    margin-bottom: 0.75rem;
+}
+
+.summary p:last-child { margin-bottom: 0; }
+
+@media (max-width: 520px) {
+    .feature-row { grid-template-columns: 1fr; }
+}
