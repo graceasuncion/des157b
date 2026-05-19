@@ -20,7 +20,9 @@ body {
     margin: 0 auto;
 }
 
-.wrap header {
+/* comparative has no .wrap so target body directly */
+body > header,
+.wrap > header {
     text-align: center;
     margin-bottom: 2rem;
     color: rgb(50, 77, 102);
@@ -255,4 +257,64 @@ a:hover {
     color: rgb(35, 55, 73);
     line-height: 1.6;
     margin-bottom: 1rem;
+}
+
+
+
+/* ── Feasibility feature groups ── */
+.feat-group {
+    margin-bottom: 1.25rem;
+}
+
+.feat-group:last-child {
+    margin-bottom: 0;
+}
+
+.feat-label {
+    margin-bottom: 0.5rem;
+}
+
+.feat-group ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feat-group li {
+    font-size: 0.9rem;
+    color: rgb(35, 55, 73);
+    padding: 0.3rem 0;
+    border-bottom: 1px solid #d6e8f5;
+    line-height: 1.5;
+}
+
+.feat-group li:last-child {
+    border-bottom: none;
+}
+
+.wrap h2 {
+    text-align: center;
+    margin: 1.5rem 0 0.75rem;
+    color: rgb(35, 55, 73);
+    font-size: 1.1rem;
+}
+
+/* ── Feasibility: difficulties inside entry card ── */
+.entry .difficulty {
+    background-color: #ddeeff;
+    border-left: 3px solid rgb(56, 89, 128);
+    border-radius: 0 8px 8px 0;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.entry .difficulty:last-child {
+    margin-bottom: 0;
+}
+
+.entry h2 {
+    text-align: left;
+    margin: 1.5rem 0 0.75rem;
+    font-size: 1.05rem;
+    color: rgb(35, 55, 73);
 }
