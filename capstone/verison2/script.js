@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded',function(){
 const EXCHANGES = [
     { 
         dialogue: "Hey it is me. Are you there? I need you to come home. Can you come home? Please just come home soon",
-        timerDuration: 8000,
+        timerDuration: 6000,
         responseOptions: [
             "The weather has been really nice lately",
             "I think I left my keys on the counter.",
@@ -18,7 +18,7 @@ const EXCHANGES = [
     },
     {
         dialogue:"Why are you not answering me? I   need you here. Something happened. Please. Come home.",
-        timerDuration: 7000,
+        timerDuration: 5000,
         responseOptions:[
             "I need to remember to buy groceries tomorrow.",
             "My friend just got a new job downtown.",
@@ -28,7 +28,7 @@ const EXCHANGES = [
     },
     {
         dialogue:"I can not do this alone. Please. Come home. I need you to come home now. Are you listening to me?",
-        timerDuration: 6000,
+        timerDuration: 4500,
         responseOptions:[
             "I forgot to water the plants again this morning.",
             "I think I want to redecorate my room soon.",
@@ -38,7 +38,7 @@ const EXCHANGES = [
     },
     {
         dialogue:"Please. Something happened and I am scared. I need you. Please come home.",
-        timerDuration: 5000,
+        timerDuration: 4000,
         responseOptions:[
             "My back has been hurting from sitting all day.",
             "I saw a dog on my walk today it was really cute.",
@@ -58,7 +58,7 @@ const EXCHANGES = [
     },
     {
         dialogue:"Please. Come home",
-        timerDuration: 3000,
+        timerDuration: 1000,
         responseOptions:[
             "I should probably go to bed earlier.",
             "I keep forgetting to reply to that message.",
@@ -289,8 +289,6 @@ function showScreen(id){
     document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
     document.querySelector('#'+ id).classList.add('active');
 }
-
-
 
 
 

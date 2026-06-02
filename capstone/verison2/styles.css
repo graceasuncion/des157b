@@ -1,3 +1,12 @@
+/*screen + general*/
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
 /*landing*/
 h1{
     font-family: "Changa One", sans-serif;
@@ -6,6 +15,11 @@ h1{
 }
 
 /*dialogue*/
-#screen-call {
+#dialogue-text {
+    font-family: "Yarndings 20", system-ui;
+     font-size: 2rem;
+}
+
+.response-btn {
     font-family: "Yarndings 20", system-ui;
 }
