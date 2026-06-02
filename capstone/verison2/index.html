@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone Project</title>
+
+    <!-- Normalize CSS for browser compatability -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!-- Add link to any google fonts used here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Potta+One&family=Yarndings+20&display=swap" rel="stylesheet">
+
+    <!-- My Styles -->
+    <link href="styles.css" rel="stylesheet">
+
+    <!-- My Script -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!--LANDING-->
+    <div id="landing-screen">
+        <h1>The Conversations We Can't Pick Up</h1>
+
+        <button id="pick-up">Pick up the Phone</button>
+    </div>
+
+    <!--Phone Call-->
+    <div id="screen-call" class="screen">
+        <div id="speech-bubble">
+            <p id="dialogue-text"></p>
+        </div>
+    </div>
+    
+
+    <div id="response-option">
+        <button class="response-btn"></button>
+        <button class="response-btn"></button>
+        <button class="response-btn"></button>
+        <button class="response-btn"></button>
+    </div>
+
+    <!--End Dial-->
+    <div id="screen-end" class="screen">
+        <p id="dial-tone">...</p>
+    </div>
+
+    <!--Pre Prompts-->
+
+    <div id="screen-preprompts" class="screen">
+        <p class="pre-prompt" id="pre-prompt-1">You couldn't understand a word your mom said.</p>
+
+        <p class="pre-prompt" id="pre-prompt-2">For children of immigrnt families, there are countless calls, just like that one. They never get easier.</p>
+
+        <p class="pre-prompt" id="pre-prompt-3">For many, that inability becomes a source of deep shame and self-doubt.</p>
+    </div>
+
+    <!--Reflection-->
+
+    <div id="screen-reflection" class="screen">
+        <textarea id="reflection-input" placeholder="Type your response here..."></textarea>
+
+        <button id="btn-submit">Submit</button>
+    </div>
+
+
+    <div id="collective-display" class="screen">
+        <h2>Look at  what others have said</h2>
+
+        <div id="response-wall"></div>
+
+        <button id="answer-again">Answer again</button>
+        <button id="retake-call">Retake the call</button>
+    </div>
+
+    
+</body>
+</html>
