@@ -1,4 +1,8 @@
-(function(){
+document.addEventListener('DOMContentLoaded',function(){
+
+    'use strict';
+    console.log('running js');
+    
 
 //data
 const EXCHANGES = [
@@ -226,43 +230,42 @@ function revealPrePrompts(){
 }
 
 //submit response
-document.querySelector('#btn-submit').addEventListener('click',function(){
+document.querySelector('#btn-submit').addEventListener('click', function(){
     const input = document.querySelector('#reflection-input').value.trim();
-
     if (!input) return;
 
-    try {
-        const existing = JSON.parse(localStorage.getItem('capstone-responses') || '[]');
-        existing.push(input);
-        localStorage.setItem('capstone-responses', JSON.stringify(existing));
-    } catch(e) {}
-
-    showScreen('collective-display');
-    loadCollectiveResponses();
+    const Response = Parse.Object.extend('Response');
+    const response = new Response();
+    response.set('text', input);
+    response.save().then(function(){
+        showScreen('collective-display');
+        loadCollectiveResponses();
+    }).catch(function(error){
+        console.error('Error saving response:', error);
+    });
 });
 
 //collective display
 
 function loadCollectiveResponses(){
     const wall = document.querySelector('#response-wall');
-
     wall.innerHTML = '';
- 
-    let allResponses = [];
-    try {
-        allResponses = JSON.parse(localStorage.getItem('capstone-responses') || '[]');
-    } catch (e) {}
- 
-    if (allResponses.length === 0) {
-        wall.innerHTML = '<p>Be the first to respond.</p>';
-        return;
-    }
- 
-    allResponses.forEach(response => {
-        const card = document.createElement('div');
-        card.className = 'response-card';
-        card.textContent = response;
-        wall.appendChild(card);
+
+    const Response = Parse.Object.extend('Response');
+    const query = new Parse.Query(Response);
+    query.find().then(function(results){
+        if (results.length === 0){
+            wall.innerHTML = '<p>Be the first to respond.</p>';
+            return;
+        }
+        results.forEach(function(result){
+            const card = document.createElement('div');
+            card.className = 'response-card';
+            card.textContent = result.get('text');
+            wall.appendChild(card);
+        });
+    }).catch(function(error){
+        console.error('Error loading responses:', error);
     });
 }
 
@@ -291,4 +294,4 @@ function showScreen(id){
 
 
 
-})();
+});
