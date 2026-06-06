@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded',function(){
 const EXCHANGES = [
     { 
         dialogue: "Hey it is me. Are you there? I need you to come home. Can you come home? Please just come home soon",
-        timerDuration: 6000,
+        timerDuration:5000,
         responseOptions: [
             "The weather has been really nice lately",
             "I think I left my keys on the counter.",
@@ -18,7 +18,7 @@ const EXCHANGES = [
     },
     {
         dialogue:"Why are you not answering me? I   need you here. Something happened. Please. Come home.",
-        timerDuration: 5000,
+        timerDuration: 4500,
         responseOptions:[
             "I need to remember to buy groceries tomorrow.",
             "My friend just got a new job downtown.",
@@ -28,7 +28,7 @@ const EXCHANGES = [
     },
     {
         dialogue:"I can not do this alone. Please. Come home. I need you to come home now. Are you listening to me?",
-        timerDuration: 4500,
+        timerDuration: 4000,
         responseOptions:[
             "I forgot to water the plants again this morning.",
             "I think I want to redecorate my room soon.",
@@ -38,7 +38,7 @@ const EXCHANGES = [
     },
     {
         dialogue:"Please. Something happened and I am scared. I need you. Please come home.",
-        timerDuration: 4000,
+        timerDuration: 3500,
         responseOptions:[
             "My back has been hurting from sitting all day.",
             "I saw a dog on my walk today it was really cute.",
@@ -48,7 +48,7 @@ const EXCHANGES = [
     },
     {
         dialogue:"Why won't you answer me? I need you.Please. Come home. I need you. Please",
-        timerDuration: 3500,
+        timerDuration: 3000,
         responseOptions: [
             "I really need to clean my room this weekend.",
             "I think the plant by the window is dying.",
@@ -58,7 +58,7 @@ const EXCHANGES = [
     },
     {
         dialogue:"Please. Come home",
-        timerDuration: 1000,
+        timerDuration: 800,
         responseOptions:[
             "I should probably go to bed earlier.",
             "I keep forgetting to reply to that message.",
@@ -189,7 +189,7 @@ function handleResponse(){
     setTimeout(function(){
         currentExchange++;
         loadExchange(currentExchange);
-    }, 1000);
+    }, 500);
 }
 
 //end call
@@ -197,36 +197,35 @@ function handleResponse(){
 function endCall(){
     showScreen('screen-end');
 
-    //after silence, show translation
     setTimeout(function(){
-        showScreen('screen-translation');
-        document.querySelector('#translation-text').textContent = TRANSLATION;
-
-        setTimeout(function(){
-            showScreen('screen-preprompts');
-            revealPrePrompts();
-        }, 5000)
-    }, 4000)
+        showScreen('screen-preprompts');
+        revealPrePrompts();
+    });
 }
 
 //pre-prompts
 function revealPrePrompts(){
-    const prompts = ['pre-prompt-1','pre-prompt-2','pre-prompt-3'];
+    const prompts = ['pre-prompt-1', 'pre-prompt-2', 'pre-prompt-3'];
+    let i = 0;
 
-    prompts.forEach(id => {
-        document.querySelector("#" + id).classList.remove('visible');
-    });
+    function showNext(){
+        if (i >= prompts.length){
+            showScreen('screen-reflection');
+            return;
+        }
 
-    prompts.forEach((id, i) => {
-        setTimeout(() => {
-            document.querySelector("#" + id).classList.add('visible');
-        },i * 2200);
-    });
+        // show current prompt
+        document.querySelector('#' + prompts[i]).classList.add('visible');
 
-    //move to reflection after all prompts
-    setTimeout(function(){
-        showScreen('screen-reflection');
-    }, prompts.length * 2200 + 1000);
+        // after 2 seconds, hide it and show the next
+        setTimeout(function(){
+            document.querySelector('#' + prompts[i]).classList.remove('visible');
+            i++;
+            setTimeout(showNext, 800); // small gap between prompts
+        }, 2200);
+    }
+
+    showNext();
 }
 
 //submit response
