@@ -22,6 +22,14 @@ body {
     opacity: 1;
     pointer-events: all;
 }
+
+/*living room background*/
+#landing-screen, #screen-call, # {
+    background-image: url('images/background_capstone.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 /*landing*/
 h1{
     font-family: "Changa One", sans-serif;
@@ -102,16 +110,11 @@ h1{
 
 /*pre-prompts*/
 #screen-preprompts {
-    position: relative;
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
     text-align: center;
 }
 
-#screen-preprompts .pre-prompt{
+#screen-preprompts .pre-prompt {
     position: absolute;
     opacity: 0;
     transition: opacity 0.8s ease;
@@ -123,10 +126,6 @@ h1{
 
 /*reflection*/
 #screen-reflection {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
     text-align: center;
 }
