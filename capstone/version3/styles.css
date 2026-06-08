@@ -105,6 +105,23 @@ body {
     background: #5C2E2E;
 }
 
+/*sounc credit*/
+#sound-credit {
+    font-family: 'Arvo', serif;
+    font-size: 0.7rem;
+    color: #1a1311;
+    text-align: center;
+    position: absolute;
+    bottom: 1rem;
+    background: rgba(245, 237, 228, 0.8);
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+}
+
+#sound-credit a {
+    color: #1a1311;
+}
+
 
 /*exchange scene screen*/
 #screen-call {
