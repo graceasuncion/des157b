@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone Project</title>
+ 
+    <!-- Normalize CSS for browser compatibility -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+ 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Changa+One:ital@0;1&family=Yarndings+20&display=swap" rel="stylesheet">
+ 
+    <!-- My Styles -->
+    <link href="styles.css" rel="stylesheet">
+ 
+    <!-- Parse SDK -->
+    <script src="https://unpkg.com/parse/dist/parse.min.js"></script>
+    <script>
+        Parse.initialize("SZqMmwGuBXbsbv40oXCCFzQBkXU78IYT06nrf8zH", "OWSU5B4pSwjJEhUUspdAHgRdpINyQNGbiYyw9TXL");
+        Parse.serverURL = "https://parseapi.back4app.com/";
+    </script>
+ 
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+ 
+    <!-- My Script -->
+    <script src="script.js" defer></script>
+</head>
+<body data-exchange="0">
+ 
+    <!-- LANDING -->
+    <div id="landing-screen" class="screen active">
+        <h1>The Conversations We Can't Pick Up</h1>
+        <button id="pick-up">Pick up the Phone</button>
+
+        <audio id="phone-ring" loop>
+        <source src="audio/freesound_community-rotary-phone-ring-medium-103869.mp3" type="audio/mpeg"></audio>
+    </div>
+ 
+    <!-- PHONE CALL -->
+    <div id="screen-call" class="screen">
+ 
+        <div id="speech-bubble">
+            <p id="dialogue-text"></p>
+        </div>
+ 
+        <div id="timer">
+            <div id="clock"></div>
+        </div>
+ 
+        <div id="response-option">
+            <button class="response-btn"></button>
+            <button class="response-btn"></button>
+            <button class="response-btn"></button>
+            <button class="response-btn"></button>
+        </div>
+ 
+    </div>
+ 
+    <!-- END DIAL -->
+    <div id="screen-end" class="screen">
+        <p id="dial-tone"></p>
+    </div>
+ 
+    <!-- PRE PROMPTS -->
+    <div id="screen-preprompts" class="screen">
+        <p class="pre-prompt" id="pre-prompt-1">You couldn't understand a word that was said during the phone call.</p>
+        <p class="pre-prompt" id="pre-prompt-2">For children of immigrant families, there are countless calls, just like that one. They never get easier.</p>
+        <p class="pre-prompt" id="pre-prompt-3">For many, that inability becomes a source of deep shame and self-doubt.</p>
+    </div>
+ 
+    <!-- REFLECTION -->
+    <div id="screen-reflection" class="screen">
+        <p id="reflection-prompt">What do you think could help children of immigrant families move past the shame and reconnect with their language?</p>
+        <textarea id="reflection-input" placeholder="Type your response here..."></textarea>
+        <button id="btn-submit">Submit</button>
+    </div>
+ 
+    <!-- COLLECTIVE DISPLAY -->
+    <div id="collective-display" class="screen">
+        <h2>Look at what others have said</h2>
+        <div id="response-wall"></div>
+        <button id="answer-again">Answer again</button>
+        <button id="retake-call">Retake the call</button>
+    </div>
+ 
+</body>
+</html>
