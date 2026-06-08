@@ -2,6 +2,11 @@ document.addEventListener('DOMContentLoaded', function(){
  
     'use strict';
     console.log('running js');
+
+    //usability testing
+    document.querySelector('#overlay-close').addEventListener('click', function(){
+        document.querySelector('#overlay').style.display = 'none';
+    });
  
     //data
     const EXCHANGES = [
