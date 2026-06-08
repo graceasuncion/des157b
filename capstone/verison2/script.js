@@ -193,10 +193,8 @@ function handleResponse(){
 function endCall(){
     showScreen('screen-end');
 
-    //after silence, show translation
     setTimeout(function(){
         showScreen('screen-translation');
-        document.querySelector('#translation-text').textContent = TRANSLATION;
 
         setTimeout(function(){
             showScreen('screen-preprompts');
