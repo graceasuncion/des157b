@@ -38,37 +38,8 @@ body {
     text-align: center;
 }
 
-/*landing description*/
-#landing-description {
-    font-family: 'Arvo', serif;
-    font-size: 1rem;
-    color: #1a1311;
-    max-width: 600px;
-    line-height: 1.7;
-    text-align: center;
-    margin: 0 auto 0.5rem auto;
-}
 
-/*landing-instruction*/
-#landing-instructions {
-    font-family: 'Arvo', serif;
-    font-size: 0.9rem;
-    color: #1a1311;
-    max-width: 460px;
-    line-height: 1.7;
-    text-align: center;
-    margin: 0 auto;
-    font-style: italic;
-    opacity: 0.8;
-}
 /* landing text and button */
-#landing-top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.1rem;
-    margin-bottom: 1rem;
-}
 
 #landing-screen h1 {
     color: #1a1311;
