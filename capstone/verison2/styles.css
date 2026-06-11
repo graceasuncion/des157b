@@ -24,7 +24,7 @@ body {
 }
 
 /*living room background*/
-#landing-screen, #screen-call, # {
+#landing-screen, #screen-call{
     background-image: url('images/background_capstone.png');
     background-size: cover;
     background-position: center;
