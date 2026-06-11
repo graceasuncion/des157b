@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Case Study Template - put your title here</title>
+
+     <!-- Normalize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+ 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&family=Changa+One:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- My Styles -->
+    <link href="styles.css" rel="stylesheet">
+
+	
+	<!--/ /-------- Needed For Mobile Devices --------/ /-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+</head>
+<body>
+ 
+    <header id="top">
+        <div class="container">
+            <h1>The Conversations We Can't Pick Up</h1>
+            <p>Grace Asuncion</p>
+            <address><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#103;&#104;&#97;&#115;&#117;&#110;&#99;&#105;&#111;&#110;&#64;&#117;&#99;&#100;&#97;&#118;&#105;&#115;&#46;&#101;&#100;&#117;">&#103;&#104;&#97;&#115;&#117;&#110;&#99;&#105;&#111;&#110;&#64;&#117;&#99;&#100;&#97;&#118;&#105;&#115;&#46;&#101;&#100;&#117;</a></address>
+        </div>
+    </header>
+ 
+    <nav>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#research">UX Research</a></li>
+            <li><a href="#ideation">Ideation</a></li>
+            <li><a href="#design">Visual Design & UI</a></li>
+            <li><a href="#revisions">Revisions</a></li>
+            <li><a href="#summary">Summary</a></li>
+        </ul>
+    </nav>
+ 
+    <!-- OVERVIEW -->
+    <section id="overview">
+        <div class="container">
+            <h2>Project Overview</h2>
+            <img src="images/landing_page.jpg" alt="A rotary phone on a nightstand, the landing screen illustration" class="hero-image">
+            <p class="image-caption">Landing screen illustration, a rotary phone on a nightstand</p>
+            <div class="content">
+                <p><em>The Conversations We Can't Pick Up</em> is an interactive narrative experience that explores the emotional cost of language loss in immigrant families. The project places the user in a phone call with a family member speaking in an unfamiliar language that they cannot understand. Through a series of timed exchanges that replicate a real conversation, the user is forced to respond without comprehension, simulating a familiar discomfort that many children of immigrant families carry throughout their lives.</p>
+                <p>The primary audience is first- and second-generation immigrant youth who feel a disconnect between their own identity and their family's heritage. The secondary audience is anyone interested in understanding what this experience is like.</p>
+                <p>The goal of this project was to transform the feeling of disconnection and guilt around not knowing one's heritage language into something constructive, something the user can take away and act on. The central motivation is to give users a starting point for how they can begin to close that language gap for themselves.</p>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- UX RESEARCH -->
+    <section id="research">
+        <div class="container">
+            <h2>UX Research</h2>
+            <div class="content">
+                <p>The research for this project drew from two directions: understanding the lived experience of language loss in immigrant families, and studying how interactive narratives can create genuine emotional engagement.</p>
+                <p>My original intent for this project was primarily towards my own direct experience of not being able to speak fluently in Tagalog, the native language of the Philippines. Due to this, the annotated bibliography is primarily focused on Filipino Americans. However, the research also made clear that the experience of language loss is not unique to one community. It is a shared reality across immigrant families, and the project was designed with that broader resonance in mind.</p>
+                <p>To understand the problem, a KQED article documented firsthand experiences of Filipino Americans unable to communicate with their Tagalog-speaking grandparents, describing the feeling as "a sense of disconnection with culture." The article made clear that language loss is not simply a communication barrier but a conflict of cultural identity and family intimacy, one driven by colonization and immigrant families prioritizing English for survival. A second source from We Are One Humanity deepened this understanding, showing that Tagalog disappears across generations faster than other immigrant groups' native languages, contributing to mental health issues and strained family relationships. Together, these sources confirmed that the experience this project simulates is not personal or niche. It is community-wide and urgent, and if the emotional experience of the narrative can reach even a fraction of that population and motivate them to start learning, the project is doing something that matters at a scale beyond design.</p>
+                <p>To understand how to design for this experience, a study from the National Center for Biotechnology Information on emotion perception in serious interactive digital narratives was examined. It found that the most effective emotional arc follows a rise, a dip, and an uptick at the end, a structure that drives stronger engagement and motivation. This directly informed the narrative arc of the project: the call escalates in urgency and discomfort before ending abruptly, followed by a moment of reflection that redirects the emotional weight toward action rather than guilt.</p>
+                <p>Two comparative projects were also studied. <em>Syrian Journey</em> by BBC News demonstrated how interactive journalism could place users inside genuinely hard decisions with no safe outcome, making them feel personally responsible for what happens. The interface uses a clean editorial layout with short text blocks and two to three choices, keeping the tone serious while the decisions carry real weight. <em>Coming Out Simulator</em> by Nicky Case showed how a bare interface, plain text, dark background, and simple choices, could put the full emotional weight on the words rather than the visuals. It also demonstrated how specificity makes a story universal: the more particular the experience, the more others recognize themselves in it. The dialogue presents no correct answer, which makes the user's choice feel like a real one.</p>
+ 
+                <div class="callout">
+                    These references shaped the core design decisions of the project. Like <em>Syrian Journey</em>, the response options in this experience offer no correct answer. Like <em>Coming Out Simulator</em>, the interface stays spare so the emotional content carries the weight. And like the narrative structure recommended by the NCBI study, the experience moves from discomfort to reflection to a call to action.
+                </div>
+ 
+                <div class="sources">
+                    <h3>Sources</h3>
+                    <a href="https://www.kqed.org/news/10746111" target="_blank">KQED, For Some Filipino-Americans, Language Barriers Leave Culture Lost in Translation</a>
+                    <a href="https://www.weareonehumanity.org/writings/between-english-and-emptiness" target="_blank">We Are One Humanity, Between English and Emptiness</a>
+                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9347217/" target="_blank">NCBI, Exploration of Emotion Perception in Serious Interactive Digital Narrative</a>
+                    <a href="http://www.bbc.co.uk/news/world-middle-east-32057601" target="_blank">BBC News, Syrian Journey: Choose Your Own Escape Route</a>
+                    <a href="http://ncase.me/cos" target="_blank">Nicky Case, Coming Out Simulator</a>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- IDEATION -->
+    <section id="ideation">
+        <div class="container">
+            <h2>Ideation</h2>
+            <div class="content">
+                <p>The project began as a deeply personal one. The original concept was rooted in a direct experience of not understanding Tagalog, the native language of the Philippines, and the quiet discomfort that comes with that. The first version of the experience placed the user in a kitchen scene, where a grandma is speaking to them in Tagalog. The exchanges escalated from a warm greeting to something personal to something that mattered, ending with a collective reveal of how others responded and a reflection prompt about how the user feels about their own heritage language.</p>
+ 
+                <div class="image-grid">
+                    <div>
+                        <img src="images/og_userflow.png" alt="Original user flow, kitchen scene with lola">
+                        <p class="caption">Version 1, original kitchen scene user flow</p>
+                    </div>
+                    <div>
+                        <img src="images/final_userflow.png" alt="Final user flow, phone call format">
+                        <p class="caption">Version 2, final phone call user flow</p>
+                    </div>
+                </div>
+ 
+                <p>The response options went through several iterations. The first version had external responses, things the user would say out loud to the lola. But this felt ineffective because it didn't capture the internal experience of not knowing the language. The second version shifted to internal dialogue, giving the user emotional responses that reflected what they might be feeling rather than saying. While this felt more resonant, a new problem emerged: the feelings were essentially the same across all three exchanges. Each exchange produced the same emotional options, which flattened the escalation and reduced the impact of each moment.</p>
+                <p>While developing the user flow for this concept, questions also started to emerge about whether the original direction was fully effective for the intended audience. The kitchen scene and the grandma character were specific to a Filipino American experience. However, this leads to various questions: What happens if a user speaks Tagalog fluently? How can this be a direct experience that users can relate to if they have prior knowledge of the language? How can this create a universal feeling of not being able to understand a language?</p>
+                <p>This led to two significant changes. The kitchen scene was replaced with a phone call, which was both more focused and more universally legible as a high-stakes communication scenario. And instead of using actual Tagalog, the dialogue was rendered in Yarndings 20, a symbol font that makes all text completely unreadable regardless of the user's language background. This removed the possibility of any user having an advantage and ensured that everyone who goes through the experience starts from the same place of not understanding.</p>
+                <p>The response options were also changed from meaningful phrases to completely unrelated random sentences rendered in the same symbol font, so the user cannot even rely on context clues to guess what they are saying. The result is an experience that is no longer about one specific language or one specific family, but about the universal feeling of being in a conversation you cannot reach.</p>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- VISUAL DESIGN & UI -->
+    <section id="design">
+        <div class="container">
+            <h2>Visual Design & User Interface</h2>
+            <div class="content">
+                <p>The visual direction for this project was guided by one central feeling: warmth and domesticity. The goal was for the experience to feel like being inside someone's home, familiar, intimate, and lived in. This informed every visual decision, from the color palette to the illustration style.</p>
+                <p>The original visual intent leaned darker in tone, muted, heavy, and somber to match the discomfort of the experience. However, this felt like it was working against the larger goal of the project. The intent was never to leave the user in a negative place, but to move them from discomfort toward something constructive and hopeful. Shifting to a warmer palette of warm beiges, dusty rose reds, and soft ambient tones created a visual environment that felt more like a home than a void, which better supported the emotional arc the project was trying to build.</p>
+                <img src="images/phone_ringing.gif" alt="Rotary phone illustration on a nightstand, warm beige and dusty rose palette">
+                <p class="image-caption">The landing screen illustration, warm beige and dusty rose palette with a rotary phone as the focal point</p>
+                <p>The color palette was not defined upfront with a formal style guide. Instead, it evolved naturally through the process of building the project. The warm beige tones of the background illustrations and the dusty rose red of the rotary phone became the foundation, and the rest of the palette followed from there. Red became the focal color, used in the phone illustration, the buttons, and key UI elements, because it was already the most visually dominant element in the scene.</p>
+                <p>The rotary phone was chosen over a modern smartphone because it simply felt more right visually. It carries a sense of age and intimacy that a smartphone doesn't, it belongs in a home, on a nightstand, in a family space. That quality matched the emotional tone of the experience.</p>
+                <p>Typography was chosen intuitively rather than through a formal process. Changa One in italic was selected for the title because it feels bold and authoritative without being cold. Arvo was used for body text because it is warm and readable. Yarndings 20 was chosen specifically for the dialogue and response options because it renders all text as unreadable symbols, making it the most important typographic decision in the project. It ensures that no user can understand what is being said or what they are choosing, regardless of their language background.</p>
+ 
+                <div class="callout">
+                    Several UI decisions were made to reinforce the emotional arc of the experience. The response buttons are pinned to the bottom of the screen in a 2x2 grid, like a game interface, creating a sense of pressure and urgency. The analog clock in the top right corner acts as the timer, it sweeps faster with each exchange without announcing itself as a countdown, so the pressure builds without feeling like a game mechanic. The speech bubble sits to the left of the phone, with a tail pointing toward it, so the voice feels like it is coming from the phone itself. The pre-prompts after the call appear one at a time, fading in and out, so each line lands individually before the next one arrives.
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- REVISIONS -->
+    <section id="revisions">
+        <div class="container">
+            <h2>Revisions</h2>
+            <div class="content">
+                <p>Usability testing revealed that the primary challenge for users was understanding what they were supposed to do when they first arrived at the experience. The landing screen originally had only the title and a button, users did not have enough context to know what kind of experience they were entering or what would be expected of them during the interaction.</p>
+                <p>Based on this feedback, two additions were made to the landing screen. A brief description was added to give users a general sense of what the narrative is about. A second line of instruction was added below it to set expectations for the interaction itself.</p>
+                <div class="callout">
+                    These additions were kept minimal intentionally. The goal was to orient the user without over-explaining the experience or removing the discomfort that comes from not fully knowing what is happening. The point is to be in a conversation you cannot understand, and spelling that out too clearly before it begins would soften the impact.
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- SUMMARY -->
+    <section id="summary">
+        <div class="container">
+            <h2>Summary</h2>
+            <div class="content">
+                <p>Working on this project was both challenging and deeply personal. The most significant challenge was managing the demands of other classes and extracurriculars while trying to bring a complex interactive experience to life. Beyond the logistical pressure, the ideation phase proved to be the hardest creative hurdle. The central goal of the project was to take the guilt and discomfort that children of immigrant families feel around language loss and turn it into something positive and actionable. Finding the right design decisions to carry that emotional weight took significant iteration and reflection.</p>
+                <p>What made it worth it was the personal connection to the work. This capstone is rooted in a real experience that many people share but rarely see reflected to them. Being able to create something tied to that experience, and to shape it into something others can genuinely relate to, is truly the purpose of my designs. Being able to provide some hope for users who share this experience is the overall goal that I aim to have.</p>
+                <p>Completing this project under the constraints that came with it is something to be proud of. Bringing a personal story into a form that others can experience and connect with is exactly what design at its best can do.</p>
+            </div>
+        </div>
+    </section>
+ 
+    <footer>
+        <div class="container">
+            <p>The Conversations We Can't Pick Up — UX/UI Case Study</p>
+            <p>Grace Asuncion</p>
+            <address><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#103;&#104;&#97;&#115;&#117;&#110;&#99;&#105;&#111;&#110;&#64;&#117;&#99;&#100;&#97;&#118;&#105;&#115;&#46;&#101;&#100;&#117;">&#103;&#104;&#97;&#115;&#117;&#110;&#99;&#105;&#111;&#110;&#64;&#117;&#99;&#100;&#97;&#118;&#105;&#115;&#46;&#101;&#100;&#117;</a></address>
+            <br>
+            <a href="#top" class="top-link">↑ back to top</a>
+        </div>
+    </footer>
+ 
+</body>
+</html>

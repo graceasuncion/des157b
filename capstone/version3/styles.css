@@ -23,9 +23,9 @@ body {
     pointer-events: all;
 }
 
-/*living room background*/
-#landing-screen, #screen-call, # {
-    background-image: url('images/background_capstone.png');
+/*landing screen backgroud*/
+#landing-screen{
+    background-image: url('images/phone_ringing.gif');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -34,12 +34,40 @@ body {
     align-items: center !important;
     justify-content: flex-start !important;
 
-    padding: -4rem;
     text-align: center;
 }
 
+/*landing description*/
+#landing-description {
+    font-family: 'Arvo', serif;
+    font-size: 1rem;
+    color: #1a1311;
+    max-width: 600px;
+    line-height: 1.7;
+    text-align: center;
+    margin: 0 auto 0.5rem auto;
+}
 
+/*landing-instruction*/
+#landing-instructions {
+    font-family: 'Arvo', serif;
+    font-size: 0.9rem;
+    color: #1a1311;
+    max-width: 800px;
+    line-height: 1.7;
+    text-align: center;
+    margin: 0 auto;
+    font-style: italic;
+    opacity: 0.8;
+}
 /* landing text and button */
+#landing-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1rem;
+    margin-bottom: 1rem;
+}
 
 #landing-screen h1 {
     color: #1a1311;
@@ -74,6 +102,23 @@ body {
 
 #pick-up:hover {
     background: #5C2E2E;
+}
+
+/*sounc credit*/
+#sound-credit {
+    font-family: 'Arvo', serif;
+    font-size: 0.7rem;
+    color: #1a1311;
+    text-align: center;
+    position: absolute;
+    bottom: 1rem;
+    background: rgba(245, 237, 228, 0.8);
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+}
+
+#sound-credit a {
+    color: #1a1311;
 }
 
 

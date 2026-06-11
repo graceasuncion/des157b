@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function(){
         },
         {
             dialogue:"Please. Come home",
-            timerDuration: 1000,
+            timerDuration: 1500,
             responseOptions:[
                 "I should probably go to bed earlier.",
                 "I keep forgetting to reply to that message.",
@@ -195,29 +195,33 @@ function clearClock(){
     }
  
     // end call 
-    function endCall(){
-        document.querySelector('#response-option').classList.remove('active');
+  function endCall(){
+    document.querySelector('#response-option').classList.remove('active');
 
-        const endScreen = document.querySelector('#screen-end');
-        showScreen('screen-end');
+    const endScreen = document.querySelector('#screen-end');
+    showScreen('screen-end');
 
-        // fade out after 2 seconds
+    setTimeout(function(){
+        // fade out end screen
+        endScreen.style.transition = 'opacity 1.5s ease';
+        endScreen.style.opacity = '0';
+
         setTimeout(function(){
-            endScreen.style.transition = 'opacity 1.5s ease';
-            endScreen.style.opacity = '0';
+            // reset end screen
+            endScreen.style.transition = 'none';
+            endScreen.style.opacity = '';
 
+            // switch to preprompts
+            showScreen('screen-preprompts');
+
+            // longer delay so screen switch fully completes before prompts start
             setTimeout(function(){
-                // fully reset end screen before switching
-                endScreen.style.transition = 'none';
-                endScreen.style.opacity = '1';
-                showScreen('screen-preprompts');
-                // small delay so screen is fully visible before prompts start
-                setTimeout(function(){
-                    revealPrePrompts();
-                }, 300);
-            }, 1500);
-        }, 2000);
-    }
+                revealPrePrompts();
+            }, 600);
+
+        }, 1500);
+    }, 2000);
+}
  
     // pre-prompts
     function revealPrePrompts(){

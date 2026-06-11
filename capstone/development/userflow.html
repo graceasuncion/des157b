@@ -10,15 +10,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Grandstander&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
 </head>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        document.querySelectorAll('.entry-grid img').forEach(function(img){
+            img.addEventListener('click', function(){
+                window.open(this.src, '_blank');
+            });
+        });
+    });
+</script>
+
 <body>
     <div class="wrap">
         <header>
             <h1>User Flow</h1>
         </header>
 
-        <div class="entry">
-            <img src="images/useflows.png" alt="user flows" style="width:100%; border-radius: 8px;">
+        <div class="entry-grid">
+            <div class="entry">
+                <h2>Final Userflows</h2>
+                <img src="images/final_userflow.png" alt="user flows">
+            </div>
 
+            <div class="entry">
+                <h2>Original Userflows</h2>
+                <img src="images/useflows.png" alt="user flows">
+            </div>
         </div>
 
     </div>

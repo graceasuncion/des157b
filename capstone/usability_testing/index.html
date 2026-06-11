@@ -30,12 +30,19 @@
     <script src="script.js" defer></script>
 </head>
 <body data-exchange="0">
+
+    <!--usability testing overlay-->
+    <div id="overlay">
+    <div id="overlay-content">
+        <p>You are about to participate in a usability test for an interactive narrative experience.</p>
+        <p>Please go through the experience naturally and share any thoughts or feedback afterward.</p>
+        <button id="overlay-close">Begin</button>
+    </div>
+</div>
  
     <!-- LANDING -->
     <div id="landing-screen" class="screen active">
-            <h1>The Conversations We Can't Pick Up</h1>
-        
-
+        <h1>The Conversations We Can't Pick Up</h1>
         <button id="pick-up">Pick up the Phone</button>
 
         <audio id="phone-ring" loop>
