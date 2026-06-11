@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function(){
         },
         {
             dialogue:"Please. Come home",
-            timerDuration: 1500,
+            timerDuration: 2000,
             responseOptions:[
                 "I should probably go to bed earlier.",
                 "I keep forgetting to reply to that message.",
